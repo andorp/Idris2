@@ -348,6 +348,11 @@ export
 getContent : Context -> Ref Arr (IOArray ContextEntry)
 getContent = content
 
+||| Returns the mapping from full name to resolved name.
+export
+getResolvedAs : Context -> NameMap Name
+getResolvedAs = map Resolved . resolvedAs
+
 -- Implemented later, once we can convert to and from full names
 -- Defined in Core.TTC
 export
